@@ -1,0 +1,11 @@
+<div  id="contentToConvert"> 
+    <div *ngIf="invoices.length > 0">
+      <div *ngFor="let pageIndex of getPageIndexes()">
+         <app-a4-page [invoiceList]="getInvoicesForPage(pageIndex)"></app-a4-page> 
+      </div>
+    </div>
+    <h1>Hello, PDF!</h1>
+    <p>This is a sample HTML content converted to PDF.</p>
+  </div>
+  
+  <button (click)="exportToPdf()">Export to PDF</button>
